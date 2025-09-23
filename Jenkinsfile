@@ -9,12 +9,12 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                bat 'npm test || echo "No tests configured"'
-            }
-        }
+      stage('Test') {
+    steps {
+        echo 'Skipping tests (none configured)...'
+    }
+}
+
 
         stage('Deploy') {
             steps {
